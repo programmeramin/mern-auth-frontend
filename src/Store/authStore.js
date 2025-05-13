@@ -1,15 +1,15 @@
 import {create} from "zustand";
 import axios from "axios";
 
-     const API_URL = "https://mern-auth-backend-pearl.vercel.app/api/auth";
+     const API_URL = "http://localhost:5050/api/auth";
 
      axios.defaults.withCredentials = true;
 
-export const useAuthStore = create((set) =>({
+export const useAuthStore = create((set) =>({ 
 
     user: null,
-	isAuthenticated: false,
-	error: null,
+	isAuthenticated: false, 
+	error: null,    
 	isLoading: false,
 	isCheckingAuth: true,
 	message: null,
